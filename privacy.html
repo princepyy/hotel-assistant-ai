@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - HotelBook AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.5/cdn.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #e0e7ff, #f0f4f8);
+            color: #2d3748;
+            font-family: 'Inter', sans-serif;
+        }
+        .privacy-card {
+            animation: fadeIn 0.5s ease-in-out;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .privacy-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .header-nav a {
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+        .header-nav a:hover {
+            transform: translateY(-2px);
+        }
+        .header-nav a.active {
+            background-color: #c7d2fe;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            color: #4f46e5;
+        }
+        .chat-button {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .chat-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .social-icon {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #4f46e5;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-gray-100">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-gradient-to-r from-indigo-100 to-purple-100 shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h-2m-6 0H3m9-17v17" />
+                        </svg>
+                        <h1 class="ml-2 text-2xl font-bold tracking-wide text-indigo-800">HotelBook AI</h1>
+                    </div>
+                    <div class="flex items-center space-x-6 header-nav">
+                        <a href="features.html" id="features-link" class="text-indigo-600 hover:text-indigo-800 font-medium">Features</a>
+                        <a href="about.html" id="about-link" class="text-indigo-600 hover:text-indigo-800 font-medium">About</a>
+                        <a href="contact.html" id="contact-link" class="text-indigo-600 hover:text-indigo-800 font-medium">Contact</a>
+                        <a href="upgrade.html" id="upgrade-link" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors font-medium chat-button">Premium</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:shadow-2xl transition-shadow duration-300 privacy-card">
+                <div class="px-6 py-4 bg-indigo-50 border-b border-indigo-100">
+                    <h2 class="text-3xl font-bold tracking-tight text-indigo-800">Privacy Policy</h2>
+                </div>
+                <div class="px-6 py-6 space-y-8">
+                    <section>
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-4">Introduction</h3>
+                        <p class="text-gray-700">We at HotelBook AI value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information when you use our hotel booking platform.</p>
+                    </section>
+                    <section>
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-4">Information We Collect</h3>
+                        <p class="text-gray-700">We collect the following types of information:</p>
+                        <ul class="list-disc pl-6 text-gray-700 mt-2">
+                            <li>Personal information (name, email, booking preferences, etc.)</li>
+                            <li>Usage data (how you interact with our website and chat assistant)</li>
+                            <li>Cookies and tracking technologies to enhance your experience</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-4">How We Use Your Information</h3>
+                        <p class="text-gray-700">Your data is used to provide personalized hotel recommendations, process bookings, improve our service, and communicate with you about your travel plans.</p>
+                    </section>
+                    <section>
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-4">Your Rights</h3>
+                        <p class="text-gray-700">You have the right to access, update, or delete your personal data at any time. Contact us to exercise these rights or learn more about our data practices.</p>
+                    </section>
+                </div>
+                <div class="px-6 py-4 bg-indigo-50 border-t border-indigo-100">
+                    <button onclick="goBack()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors font-medium chat-button" aria-label="Return to homepage">
+                        Go Back to Home
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gradient-to-r from-indigo-100 to-purple-100 py-4">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <p class="text-xs text-indigo-600">© <script>document.write(new Date().getFullYear())</script> HotelBook AI. All rights reserved.</p>
+                    <p class="text-sm text-indigo-600">
+                        Developed by
+                        <a href="https://github.com/JahanviSharma18" class="hover:underline" target="_blank">Akash</a>, 
+                        <a href="https://github.com/AkshitPrashar14" class="hover:underline" target="_blank">H Ansari</a> & 
+                        <a href="https://github.com/tanmay2765" class="hover:underline" target="_blank">Prince</a>
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="privacy.html" class="text-xs text-indigo-600 hover:text-indigo-800">Privacy</a>
+                        <a href="terms.html" class="text-xs text-indigo-600 hover:text-indigo-800">Terms</a>
+                        <a href="contact.html" class="text-xs text-indigo-600 hover:text-indigo-800">Contact</a>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-indigo-600 social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124-4.09-.205-7.719-2.165-10.141-5.144-.424.722-.666 1.561-.666 2.457 0 1.694.836 3.188 2.106 4.066-.777-.025-1.508-.238-2.146-.592v.06c0 2.367 1.684 4.342 3.918 4.788-.41.111-.843.171-1.287.171-.314 0-.622-.031-.921-.088.623 1.947 2.435 3.366 4.583 3.404-1.678 1.315-3.791 2.098-6.083 2.098-.395 0-.785-.023-1.17-.067 2.179 1.397 4.768 2.212 7.548 2.212 9.057 0 14.009-7.503 14.009-14.008 0-.213-.005-.425-.014-.636.961-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-indigo-600 social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.326 3.608 1.301.975.975 1.24 2.242 1.301 3.608.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.326 2.633-1.301 3.608-.975.975-2.242 1.24-3.608 1.301-1.265.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.326-3.608-1.301-.975-.975-1.24-2.242-1.301-3.608-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c-.062 1.366-.326-2.633 1.301-3.608.975-.975 2.242-1.24 3.608-1.301 1.265-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.453.066-2.918.362-4.045 1.489s-1.423 2.592-1.489 4.045c-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.066 1.453.362 2.918 1.489 4.045s2.592 1.423 4.045 1.489c1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.453-.066 2.918-.362 4.045-1.489s1.423-2.592 1.489-4.045c.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.066-1.453-.362-2.918-1.489-4.045s-2.592-1.423-4.045-1.489c-1.28-.058-1.688-.072-4.947-.072z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = "index.html";
+        }
+
+        // Highlight the active link
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentPage = window.location.pathname.split("/").pop();
+            const links = document.querySelectorAll(".header-nav a");
+
+            links.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
